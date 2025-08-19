@@ -33,7 +33,7 @@ public class StatsServiceTest {
     public void shouldFindMaxMouthSales() {  // Месяц с макс. продажами
         StatsService service = new StatsService();
         long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMaxMouth = 6;
+        int expectedMaxMouth = 8;
         int actualMaxMouth  = service.maxSales(sales);
         Assertions.assertEquals(expectedMaxMouth, actualMaxMouth);
 
