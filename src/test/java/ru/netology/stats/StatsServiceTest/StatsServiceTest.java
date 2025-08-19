@@ -8,7 +8,7 @@ import ru.netology.stats.StatsService;
 
 public class StatsServiceTest {
     @Test
-    public void shouldFindAmountSales() {
+    public void shouldFindAmountSales() {    // Сумма всех продаж
         StatsService service = new StatsService();
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -20,13 +20,32 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void shouldFindMeanSales() {
+    public void shouldFindMeanSales() {    // Среднее число продаж
         StatsService service = new StatsService();
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedMean = 15;
         int actualMean = service.meanSales(sales);
         Assertions.assertEquals(expectedMean, actualMean);
+    }
+
+    @Test
+    public void shouldFindMaxMouthSales() {
+        StatsService service = new StatsService();
+        long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expectedMaxMouth = 6;
+        int actualMaxMouth  = service.maxSales(sales);
+        Assertions.assertEquals(expectedMaxMouth, actualMaxMouth);
+
+    }
+
+    @Test
+    public void shouldFindMinMouthSales() {
+        StatsService service = new StatsService();
+        long [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expectedMinMouth = 9;
+        int actualMinMouth  = service.minSales(sales);
+        Assertions.assertEquals(expectedMinMouth, actualMinMouth);
     }
 
 
